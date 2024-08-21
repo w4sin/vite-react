@@ -5,13 +5,14 @@ import MainPage from "./pages/main"
 function App() {
 
   return (
-    <div className="main">
-      <Routes>
-        <Route index element={<Navigate to="/main" replace />} />
-        <Route path="/main" element={<MainPage />} />
+    <Routes>
+      <Route index element={<Navigate to="main" replace />} />
+      <Route path="main" element={<MainPage />} >
+        <Route path="about_me" element={<Error404Page />} />
         <Route path="*" element={<Error404Page />} />
-      </Routes>
-    </div>
+      </Route>
+      <Route path="*" element={<Error404Page />} />
+    </Routes>
   )
 }
 

@@ -5,4 +5,9 @@ export default {
     extend: {},
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["pastel", "night"],
+    logs: false,
+  },
+  darkMode: ["class", '[data-theme="night"]'],
 };
