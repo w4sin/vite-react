@@ -10,3 +10,7 @@
 .main {
   @apply w-screen h-screen overflow-hidden;
 }
+
+.layout-rounded {
+  @apply w-fit flex justify-center items-center border-2 rounded-lg p-1;
+}

@@ -1,33 +1,26 @@
-import { useState } from "react"
-import Sidebar from "../components/sidebar"
-import SwitchTheme from "../components/switch-theme"
-import { SECTION_WIDTH } from "../ultils/size"
+import { useState } from "react";
+import Sidebar from "../components/layout/sidebar";
+import { SECTION_WIDTH } from "../ultils/size";
 
 const MainPage = () => {
+  const [openSidebar, setOpenSidebar] = useState(true);
 
-    const [openSidebar, setOpenSidebar] = useState(true)
+  const toggleSidebar = () => {
+    setOpenSidebar(() => !openSidebar);
+  };
 
-    const toggleSidebar = () => {
-        setOpenSidebar(() => !openSidebar)
-    }
+  return (
+    <div className="w-screen h-screen flex overflow-hidden">
+      <Sidebar isOpen={openSidebar} toggleSidebar={toggleSidebar} />
 
-    return (
-        <div className="w-screen h-screen flex overflow-hidden">
-            <Sidebar isOpen={openSidebar} toggleSidebar={toggleSidebar} />
+      <section
+        className={`absolute left-0 w-full h-full
+                transition-all duration-500 ease-in-out ${SECTION_WIDTH}`}
+      >
+        <div className="2xl:container w-full h-full mx-auto"></div>
+      </section>
 
-
-            <section
-                className={`absolute left-0 w-full h-full
-                transition-all duration-500 ease-in-out ${SECTION_WIDTH}`}>
-
-                <div className="2xl:container w-full h-full mx-auto">
-                    <SwitchTheme />
-
-                </div>
-
-            </section>
-
-            {/*             
+      {/*             
             <SwitchTheme />
 
             <h1 className="prose ">aaaaaa</h1>
@@ -35,8 +28,8 @@ const MainPage = () => {
 
             <button className="btn btn-primary min-w-36">Primary</button>
             <button className="btn btn-secondary">Secondary</button> */}
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default MainPage
+export default MainPage;
