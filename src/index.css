@@ -12,5 +12,5 @@
 }
 
 .layout-rounded {
-  @apply w-fit flex justify-center items-center border-2 rounded-lg p-1;
+  @apply w-fit flex justify-center items-center border-2 border-secondary-light rounded-lg p-1;
 }

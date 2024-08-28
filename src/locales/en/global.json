@@ -4,7 +4,10 @@
     "mode": "Mode",
     "welcome": "Welcome",
     "about_me": {
-      "title": "About me"
+      "title": "About Me"
+    },
+    "credit": {
+      "title": "Credit"
     }
   }
 }

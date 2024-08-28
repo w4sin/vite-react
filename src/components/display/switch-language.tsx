@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import flag_th from "../../assets/flag_th.png";
 import flag_en from "../../assets/flag_en.png";
 
-const sizeFlag = "w-7 h-7";
+const sizeFlag = "w-6 h-6";
 
 const SwitchLanguage = () => {
   const { i18n } = useTranslation();
@@ -16,7 +16,11 @@ const SwitchLanguage = () => {
   return (
     <div className="layout-rounded">
       <label className="swap swap-flip text-xl">
-        <input type="checkbox" onChange={toggleLanguage} />
+        <input
+          name="switch-language"
+          type="checkbox"
+          onChange={toggleLanguage}
+        />
 
         <div className="swap-on">
           <img
@@ -36,8 +40,5 @@ const SwitchLanguage = () => {
     </div>
   );
 };
-
-//<a href="https://www.flaticon.com/free-icons/thailand" title="thailand icons">Thailand icons created by Freepik - Flaticon</a> th
-//<a href="https://www.flaticon.com/free-icons/england" title="england icons">England icons created by Marcus Christensen - Flaticon</a> en
 
 export default SwitchLanguage;

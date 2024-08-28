@@ -1,5 +1,5 @@
 
-const size = "h-7 w-7";
+const size = "h-6 w-6";
 
 const SwitchTheme = () => {
   return (
